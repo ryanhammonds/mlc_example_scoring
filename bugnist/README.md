@@ -1,5 +1,11 @@
 # Bugnist Example Submission
 
+These are the three things to include in your submission:
+
+1. predict.py
+2. requirements.txt
+3. model.pkl
+
 ## predict.py
 
 This is an example prediction function. It will run, but produce random
@@ -31,7 +37,7 @@ def predict_bugnist(data_path, pkl_path):
     ...
 ```
 
-## Requirements
+## reqirements.txt
 
 requirements.txt has the minimal requirments needed to run predict_bugnist.
 
