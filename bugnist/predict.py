@@ -22,7 +22,7 @@ def predict_bugnist(data_path, pkl_path):
         "bugnist2024fgvc/BugNIST_DATA/test"
     pkl_path : str
         Path to additional required data. Here, it's
-        the weights of the torch model, "cnn.pkl"
+        the weights of the torch model, "model.pkl"
 
     Returns
     -------
@@ -130,6 +130,6 @@ class CNN(nn.Module):
         return self.seq(x)
 
 data_path = "../../data/bugnist2024fgvc/BugNIST_DATA/validation/"
-pkl_path = "cnn.pkl"
+pkl_path = "model.pkl"
 
 df_pred = predict_bugnist(data_path, pkl_path)
