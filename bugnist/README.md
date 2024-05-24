@@ -16,7 +16,7 @@ a dataframe that is scoreable by the score function provided on kaggle.
 Here is the function signature:
 
 ```
-def predict_bugnist(data_path, pkl_path):
+def predict(data_path, pkl_path):
     """Predict bugnist data.
 
     Parameters

@@ -11,7 +11,7 @@ from skimage.morphology import local_maxima
 from skimage.io import imread
 
 
-def predict_bugnist(data_path, pkl_path):
+def predict(data_path, pkl_path):
     """Predict bugnist data.
 
     Parameters
@@ -132,4 +132,4 @@ class CNN(nn.Module):
 data_path = "../../data/bugnist2024fgvc/BugNIST_DATA/validation/"
 pkl_path = "model.pkl"
 
-df_pred = predict_bugnist(data_path, pkl_path)
+df_pred = predict(data_path, pkl_path)
