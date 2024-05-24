@@ -1,4 +1,4 @@
-# Bugnist Example Submission
+# Enhancer Example Submission
 
 These are the three things to include in your submission:
 
@@ -16,18 +16,22 @@ a dataframe that is scoreable by the score function provided on kaggle.
 Here is the function signature:
 
 ```
-def predict(data_path, pkl_path):
-    """Predict bugnist data.
+def predict(data_path, pkl_path, ohe=None):
+    """Predict enhancer data.
 
     Parameters
     ----------
     data_path : str
         Path to data directory,e.g.
-        "bugnist2024fgvc/BugNIST_DATA/validation" or
-        "bugnist2024fgvc/BugNIST_DATA/test"
+        "X_train.csv" or "X_test.csv"
     pkl_path : str
         Path to additional required data. Here, it's
         the weights of the torch model, "model.pkl"
+    ohe : OneHotEncoder
+        Used to ensure categories are the same in train/test.
+        Must set handle_unknown='ignore'. Required at test time.
+        Include this in your pkl and unpack it in the predict.py
+        script.
 
     Returns
     -------
