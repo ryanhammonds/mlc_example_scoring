@@ -68,12 +68,8 @@ def score(y_true, y_pred_proba, chromosomes):
         y_chr_true = y_true[mask]
         y_chr_pred_proba = y_pred_proba[mask]
 
-        try:
-            precision, recall, _ = precision_recall_curve(y_chr_true, y_chr_pred_proba)
-            auprc[i] = auc(recall, precision)
-        except:
-            # Predicted all zeros
-            auprc[i] = 0
+        precision, recall, _ = precision_recall_curve(y_chr_true, y_chr_pred_proba)
+        auprc[i] = auc(recall, precision)
 
     score = auprc.mean()
 
