@@ -48,8 +48,7 @@ def predict(data_path, pkl_path, ohe=None):
     with open(pkl_path, 'rb') as f:
         clf = pickle.load(f)
 
-    # Note: your classifier will be scored using:
-    # auc = score(X, y, clf, df["chr"])
+    # Predict
     y_proba = clf.predict_proba(X)[:, 1]
 
     return y_proba, df["chr"], ohe
